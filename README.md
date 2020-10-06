@@ -1,7 +1,7 @@
 # Mall-Customer-Segmentation
 
 ### Source and Project Code 
-This data was originally designed for Udemy's Machine Learning A-Z Course, though it can be found [here](https://github.com/PatrickJWalsh/Mall-Customer-Segmentation/blob/master/Mall%20Customer%20Clustering.R).  
+This data was originally designed for Udemy's Machine Learning A-Z Course, though it can be found [here](https://github.com/PatrickJWalsh/Mall-Customer-Segmentation/blob/master/Mall%20Customers.csv).  
 
 ### Project Introduction and Motivation
 The dataset is a customer database of a mall.  It contains 200 observations with basic information such as age, gender, annual income, and spending score.  The purpose of this analysis is to uncover underlying patterns in the customer base, and to group them accordingly, often known as market segmentation.  In doing so, the marketing team can have a more targeted approach to reach consumers, and the mall can make more informed strategic decisions to drive profit. 
