@@ -9,7 +9,7 @@ All project code can be referenced [here](https://github.com/PatrickJWalsh/Mall-
 The dataset is a customer database of a mall.  It contains 200 observations with basic information such as age, gender, annual income, and spending score.  The purpose of this analysis is to uncover underlying patterns in the customer base, and to group them accordingly, often known as market segmentation.  In doing so, the marketing team can have a more targeted approach to reach consumers, and the mall can make more informed strategic decisions to drive profit. 
 
 ### Methods Used
-All Analysis was performed in R.
+All Analysis was performed in R. Small tables (bucketed customer age, spending tiers, and cluster centers) were formatted in Excel.
 
 * Exploratory Data Analysis and Descriptive Statistics
 * Data Visualization
@@ -32,8 +32,8 @@ All Analysis was performed in R.
 
 ## Procedure
 
-* Data Cleaning and Exploratory Data Analysis
-* Model Building and Tuning
+* __Data Cleaning and Exploratory Data Analysis__
+* __Model Building and Tuning__
 
 ### Data Cleaning and Exploratory Data Analysis
 First, I wanted to understand the distribution of the variables. 
@@ -53,18 +53,18 @@ The customers seem to be somewhat normally distributed with respect to income, w
 
 ![image](https://user-images.githubusercontent.com/71853253/95249814-40be8680-07e7-11eb-9b3e-3a4b099744e2.png)
 
-The distribution is somewhat normalized as well, with the spending scores between 40-60 appearing most frequently among the customers (and 63% of consumers within 1SD of the mean of 50.2).  This distribution illustrates that there are a substantial amount of customers who are “somewhat frequent visitors”, or “moderate purchasers” who likely have the means to become more loyal customers.  Had the distribution been more concentrated on the ends of the spectrum (high concentrations of spending score < 30 and high concentration > 70), I believe it would be more concerning, as converting those low spending score customers into higher spending score customers would be difficult if am underlying driver to their spending behavior is their income.  Given the current state, there should be two objectives.  The first is to acquire new customers, and if the distribution of new customers is similar to that of the current one (assumes no improvement in targeted marketing), a substantial amount of them will have the spending power to be at least moderate purchasers.  The second focus should be on shifting the current consumer base primarily from moderate spenders to loyal customers, and incorporating new incentives and/or a loyalty program should encourage this.    
+The distribution is somewhat normalized as well, with the spending scores between 40-60 appearing most frequently among the customers (and 63% of consumers within 1SD of the mean of 50.2).  This distribution illustrates that there are a substantial amount of customers who are “somewhat frequent visitors”, or “moderate purchasers” who likely have the means to become more loyal customers.  Had the distribution been more concentrated on the ends of the spectrum (high concentrations of spending score < 30 and high concentration > 70), I believe it would be more concerning, as converting those low spending score customers into higher spending score customers would be difficult if the underlying driver to their spending behavior is their income.  Given the current state, there should be two objectives.  The first is to acquire new customers, and if the distribution of new customers is similar to that of the current one (assumes no improvement in targeted marketing), a substantial amount of them will have the spending power to be at least moderate purchasers.  The second focus should be on shifting the current consumer base primarily from moderate spenders to loyal customers, and incorporating new incentives and/or a loyalty program should encourage this.    
 
 ### Recap of EDA
-We have learned the following through simple exploratory Analysis.
+We have learned the following through the initial data exploration.
 
 -	Female skew (58% of all customers), 
 -	Young-middle age demographic (77.5% of customers between age 20-49)
     - 7.5% between 20-29
     - 30.5% between 30-39
     - 9.5% between 40-49
--	Middle-Upper middle class (60-90K most frequent income), mean = 60.56K
--	Medium Spending score individuals (repeat customers, not yet the most loyal)
+-	Most customers are middle to upper-middle class (60-90K income), mean = 60.56K
+-	Medium Spending score individuals make up the majority of the dataset
     - Mean of 50.2
     - SD = 25.8
     - 63% of customers within 1 SD (between 25-75)
