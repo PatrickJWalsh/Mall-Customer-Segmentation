@@ -2,7 +2,7 @@
 
 # Table of Contents
 
-* [Source and Project Code](Source and Project Code)
+* [Source and Project Code](https://github.com/PatrickJWalsh/Mall-Customer-Segmentation/blob/master/README.md#source-and-project-code)
 * [Project Introduction and Motivation](Project Introduction and Motivation)
 * [Methods Used](Methods Used)
 * [Project Highlights](Project Highlights)
