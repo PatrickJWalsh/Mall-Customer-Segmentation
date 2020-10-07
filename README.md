@@ -7,7 +7,11 @@
 * [Methods Used](https://github.com/PatrickJWalsh/Mall-Customer-Segmentation/blob/master/README.md#methods-used)
 * [Project Highlights](https://github.com/PatrickJWalsh/Mall-Customer-Segmentation/blob/master/README.md#project-highlights)
 * [Procedure](https://github.com/PatrickJWalsh/Mall-Customer-Segmentation/blob/master/README.md#procedure)
-    * [Data Cleaning and Exploratory Data Analysis](Data Cleaning and Exploratory Data Analysis)
+    * [Data Cleaning and Exploratory Data Analysis](https://github.com/PatrickJWalsh/Mall-Customer-Segmentation/blob/master/README.md#data-cleaning-and-exploratory-data-analysis)
+      * [Recap of Initial EDA](https://github.com/PatrickJWalsh/Mall-Customer-Segmentation/blob/master/README.md#recap-of-eda)
+      * [Further EDA](https://github.com/PatrickJWalsh/Mall-Customer-Segmentation/blob/master/README.md#further-eda)
+      * [Key Takeaways from EDA](https://github.com/PatrickJWalsh/Mall-Customer-Segmentation/blob/master/README.md#key-takeaways-from-eda)
+* [Model Building and Tuning](https://github.com/PatrickJWalsh/Mall-Customer-Segmentation/blob/master/README.md#building-the-model)
 
 
 ### Source and Project Code 
@@ -172,7 +176,7 @@ This is a matrix of clusters built on two-variable combinations of age, income, 
 
 After tuning the model to have 6 clusters, the clusters explained 78% of the variance within the data. 
 
-The  *factoextra* package was used to create the final cluster plot, as it performs principal component analysis on the features.  The cluster centers were then unscaled and the results can be seen under "Project Highlights."
+The  *factoextra* package was used to create the final cluster plot, as it performs principal component analysis on the features.  The cluster centers were then unscaled and the results can be seen under [Project Highlights](https://github.com/PatrickJWalsh/Mall-Customer-Segmentation/blob/master/README.md#project-highlights).
 
  
 
