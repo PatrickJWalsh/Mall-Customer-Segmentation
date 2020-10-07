@@ -10,8 +10,9 @@ install.packages("ggthemes")
 install.packages("corrplot")
 install.packages("dplyr")
 install.packages("caTools")
+install.packages("RColorBrewer")
+install.packages("cluster")
 install.packages("factoextra")
-
 
 library(ggplot2)
 library(plotly)
@@ -38,17 +39,21 @@ colnames(df)
 summary(df)
 
 #Data Exploration
+# Plot Themes
+bold_axis <- element_text(face = "bold", color = "black", size = 20)
+axis_text <- element_text(face = "bold", size = 14)
+
 ##Gender Breakdown
 genderplot <- ggplot(df, aes(x=factor(1), fill=Gender))+
   geom_bar(width = 1) +
   coord_polar("y")
-genderplot
+genderplot + theme(axis.text = axis_text) + theme(title = bold_axis) + ggtitle("Gender Breakdown")
 
 table(df$Gender)/nrow(df)
 
 ## Plot Customers by Age
 Plotage <- ggplot(df,aes(x=Age))
-Plotage + geom_histogram(fill="purple", alpha = 0.7)
+Plotage + geom_histogram(fill="purple", alpha = 0.7) + theme(axis.text = axis_text) + theme(title = bold_axis) + ggtitle("Histogram of Customer Age")
 
 ##Bucket Age by 10s
 Twenties <- filter(df, Age <30)
@@ -68,12 +73,12 @@ table(FiftiesPlus$Income)
 
 ## Plot by Income
 Plotincome <- ggplot(df, aes(x= Income))
-Plotincome + geom_histogram(fill="orange", alpha = 0.7)
+Plotincome + geom_histogram(fill="orange", alpha = 0.7) + theme(axis.text = axis_text) + theme(title = bold_axis) + ggtitle("Histogram of Customer Income")
 mean(df$Income)
 
 ## Plot by Spending Score
 Plotscore <- ggplot(df, aes(x = SpendingScore))
-Plotscore + geom_histogram(fill="brown", alpha = 0.8)
+Plotscore + geom_histogram(fill="brown", alpha = 0.8) + theme(axis.text = axis_text) + theme(title = bold_axis) + ggtitle("Histogram of Customer Spending Score")
 mean(df$SpendingScore)
 sd(df$SpendingScore)
 OneSD_SpendingSCore <- filter(df, SpendingScore >= 24 & SpendingScore <= 76)
@@ -99,21 +104,21 @@ cor(dfmale)
 
 ## Histogram of Age and Gender
 Plotagegender <- ggplot(df, aes(x = Age)) 
-Plotagegender + geom_histogram(aes(fill = factor(Gender)))
+Plotagegender + geom_histogram(aes(fill = factor(Gender))) + ggtitle("Histogram of Customers by Age (Colored by Gender)") + theme(axis.text = axis_text) + theme(title = bold_axis)
 
 table(Thirties$Gender)
 
 ##Scatter of Income and Spending Score, colored by gender
 scatter <- ggplot(df, aes(x = Income, y = SpendingScore)) + geom_point(aes(size = 2, color = factor(Gender)))
-scatter + geom_smooth(method = "lm", color = "black")
+scatter + geom_smooth(method = "lm", color = "black") + theme(axis.text = axis_text) + theme(title = bold_axis) + ggtitle("Income and Spending Score (Colored by Gender)")
 
 ##Scatter of Age and Spending Score, colored by Gender
-scatter2 <- ggplot(df, aes(x = Age, y = SpendingScore)) + geom_point(aes(size = 2, color = factor(Gender)))
-scatter2 +geom_smooth(method = "lm", color ="black")
+scatter2 <- ggplot(df, aes(x = Age, y = SpendingScore)) + ggtitle("Customer Age and Spending Score (Colored by Gender)") + geom_point(aes(size = 2, color = factor(Gender)))
+scatter2 +geom_smooth(method = "lm", color ="black") + theme(axis.text = axis_text) + theme(title = bold_axis)
 
 ##histogram of Gender and Spending Score
 Genderscore <- ggplot(df, aes(x = SpendingScore))
-Genderscore + geom_histogram(aes(fill= factor(Gender)))
+Genderscore + geom_histogram(aes(fill= factor(Gender))) + theme(axis.text = axis_text) + theme(title = bold_axis) + ggtitle("Gender by Spending Score")
 
 ##Assign Low, Medium, High Values to Spending Score
 df$spendscale <- ifelse(df$SpendingScore <34, "low", ifelse(df$SpendingScore >= 34 & df$SpendingScore <= 67, "medium", "high"))
@@ -141,9 +146,22 @@ wss
 plot(1:k.max, wss,
      type = "b", pch = 19, frame = FALSE,
      xlab = "Number of clusters K",
-     ylab = "Total within-clusters sum of squares")
+     ylab = "Total within-clusters sum of squares",
+     main = "Within-Cluster Sum of Squares by Number of Clusters")
+
+##Aerage Silhouette Method
+install.packages("factoextra")
+library(factoextra)
+fviz_nbclust(dfstandardized, kmeans, method = "silhouette")
+
+##Gap Statistic Method
+set.seed(101)
+gap_stat <- clusGap(dfstandardized, FUN = kmeans, nstart = 100,
+                    K.max = 10, B = 50)
+fviz_gap_stat(gap_stat)
 
 ###Adjusting Kmeans Model
+set.seed(101)
 Cluster6 <- kmeans(dfstandardized[,1:3],6,iter.max=100, nstart=100)
 Cluster6
 
@@ -152,11 +170,6 @@ plot(dfstandardized[,1:3], col=Cluster6$cluster)
 Cluster6$centers
 
 ##Visualize the data, Clustering on Age, Income, and Spending Score
-install.packages("factoextra")
-library(factoextra)
-bold_axis <- element_text(face = "bold", color = "black", size = 20)
-axis_text <- element_text(face = "bold", size = 14)
-
 fviz_cluster(Cluster6, data = dfstandardized[,1:3], label = 0, main = "Clusters on Age, Income, and Spending Score") + theme(axis.text = axis_text) + theme(title = bold_axis)
 
 
@@ -164,6 +177,6 @@ fviz_cluster(Cluster6, data = dfstandardized[,1:3], label = 0, main = "Clusters 
 
 
 
-
+                    
 
 
