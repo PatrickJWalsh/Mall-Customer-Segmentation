@@ -17,7 +17,7 @@ All Analysis was performed in R. Small tables (bucketed customer age, spending t
 
 ## Project Highlights
 * Clustered data into 6 customer segments based on age, income, and spending score, facilitating targeted marketing to decrease customer acquisition cost and to increase customer retention
-* Identified ideal segments to focus on given their potential lifetime value
+* Identified ideal segments to focus on given their potential increase in lifetime value
 * Recommended initiatives such as creating/revamping a loyalty program, optimizing the marketing mix, tailored promotions, and enhancing the in-store experience as levers to drive traffic and increase revenue   
 
 ![Plot of Clusters](https://user-images.githubusercontent.com/71853253/95225835-380b8780-07ca-11eb-9fcd-9b0240791ba1.png)
