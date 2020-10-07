@@ -20,7 +20,7 @@ This data was originally designed for Udemy's Machine Learning A-Z Course, thoug
 All project code can be referenced [here](https://github.com/PatrickJWalsh/Mall-Customer-Segmentation/blob/master/Mall%20Customer%20Clustering.R).
 
 ### Project Introduction and Motivation
-The dataset is a customer database of a mall.  It contains 200 observations with basic information such as age, gender, annual income, and spending score.  The purpose of this analysis is to uncover underlying patterns in the customer base, and to group them accordingly, often known as market segmentation.  In doing so, the marketing team can have a more targeted approach to reach consumers, and the mall can make more informed strategic decisions to drive profit. 
+The dataset is a customer database of a mall.  It contains 200 observations with basic information such as age, gender, annual income, and spending score.  The purpose of this analysis is to uncover underlying patterns in the customer base, and to groups of customers accordingly, often known as market segmentation.  In doing so, the marketing team can have a more targeted approach to reach consumers, and the mall can make more informed strategic decisions to increase profits.
 
 ### Methods Used
 All Analysis was performed in R. Small tables (bucketed customer age, spending tiers, and cluster centers) were formatted in Excel.
@@ -45,12 +45,10 @@ All Analysis was performed in R. Small tables (bucketed customer age, spending t
 5)	The third and fourth clusters are lower income individuals, and though the third cluster has a considerable spending score, these groups are the smallest segments and will have a tough time spending more money than they are already, so these groups are lower priority segments.  
 
 ## Procedure
-
-* __Data Cleaning and Exploratory Data Analysis__
-* __Model Building and Tuning__
+The main components of this project are exploratory data analysis and model building/tuning.
 
 ### Data Cleaning and Exploratory Data Analysis
-First, I wanted to understand the distribution of the variables. 
+First, I wanted to understand the distribution of the variables.  Variables were renamed for ease of use.   
 
 ![image](https://user-images.githubusercontent.com/71853253/95258285-84b78880-07f3-11eb-9670-9dd85e3312dc.png)
 
