@@ -3,10 +3,10 @@
 # Table of Contents
 
 * [Source and Project Code](https://github.com/PatrickJWalsh/Mall-Customer-Segmentation/blob/master/README.md#source-and-project-code)
-* [Project Introduction and Motivation](Project Introduction and Motivation)
-* [Methods Used](Methods Used)
-* [Project Highlights](Project Highlights)
-* [Procedure](Procedure)
+* [Project Introduction and Motivation](https://github.com/PatrickJWalsh/Mall-Customer-Segmentation/blob/master/README.md#project-introduction-and-motivation)
+* [Methods Used](https://github.com/PatrickJWalsh/Mall-Customer-Segmentation/blob/master/README.md#methods-used)
+* [Project Highlights](https://github.com/PatrickJWalsh/Mall-Customer-Segmentation/blob/master/README.md#project-highlights)
+* [Procedure](https://github.com/PatrickJWalsh/Mall-Customer-Segmentation/blob/master/README.md#procedure)
     * [Data Cleaning and Exploratory Data Analysis](Data Cleaning and Exploratory Data Analysis)
 
 
