@@ -1,5 +1,15 @@
 # Mall-Customer-Segmentation
 
+# Table of Contents
+
+* [Source and Project Code](Source and Project Code)
+* [Project Introduction and Motivation](Project Introduction and Motivation)
+* [Methods Used](Methods Used)
+* [Project Highlights](Project Highlights)
+* [Procedure](Procedure)
+    * [Data Cleaning and Exploratory Data Analysis](Data Cleaning and Exploratory Data Analysis)
+
+
 ### Source and Project Code 
 This data was originally designed for Udemy's Machine Learning A-Z Course, though it can be found [here](https://github.com/PatrickJWalsh/Mall-Customer-Segmentation/blob/master/Mall%20Customers.csv).  
 
@@ -162,7 +172,7 @@ This is a matrix of clusters built on two-variable combinations of age, income, 
 
 After tuning the model to have 6 clusters, the clusters explained 78% of the variance within the data. 
 
-The  *factoextra* package was used to create the final cluster plot, as it performs principal component analysis on the features.  The cluster centers were then unscaled and the results can be seen under "Project Highlights".
+The  *factoextra* package was used to create the final cluster plot, as it performs principal component analysis on the features.  The cluster centers were then unscaled and the results can be seen under "Project Highlights."
 
  
 
