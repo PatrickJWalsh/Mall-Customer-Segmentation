@@ -1,6 +1,6 @@
 # Mall-Customer-Segmentation
 
-# Table of Contents
+## Table of Contents
 
 * [Source and Project Code](https://github.com/PatrickJWalsh/Mall-Customer-Segmentation/blob/master/README.md#source-and-project-code)
 * [Project Introduction and Motivation](https://github.com/PatrickJWalsh/Mall-Customer-Segmentation/blob/master/README.md#project-introduction-and-motivation)
