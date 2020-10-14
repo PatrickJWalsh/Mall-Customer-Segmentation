@@ -30,7 +30,7 @@ All Analysis was performed in R. Small tables (bucketed customer age, spending t
 * Unsupervised Machine Learning (K-Means Clustering)
 
 ## Project Highlights
-* Clustered data into 6 customer segments based on age, income, and spending score, facilitating targeted marketing to decrease customer acquisition cost and to increase customer retention
+* Clustered data (K-Means) into 6 customer segments based on age, income, and spending score, facilitating targeted marketing to decrease customer acquisition cost and to increase customer retention
 * Identified ideal segments to focus on given their potential increase in lifetime value
 * Recommended initiatives such as creating/revamping a loyalty program, optimizing the marketing mix, tailored promotions, and enhancing the in-store experience as levers to drive traffic and increase revenue   
 
